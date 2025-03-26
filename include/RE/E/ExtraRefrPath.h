@@ -17,10 +17,11 @@ namespace RE
 		{
 		};
 
-		~ExtraRefrPath() override;  // 00
+    ExtraRefrPath() { stl::emplace_vtable(this); }
+		~ExtraRefrPath() override = default;  // 00
 
 		// override (BSExtraData)
-		[[nodiscard]] ExtraDataType GetType() const override;  // 01 - { return kRefrPath; }
+		[[nodiscard]] ExtraDataType GetType() const override { return EXTRADATATYPE; }
 
 		// members
 		NiPoint3                               startPos;          // 10

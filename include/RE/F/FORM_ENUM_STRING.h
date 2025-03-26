@@ -2,7 +2,7 @@
 
 namespace RE
 {
-	enum class FormType;
+	enum class FormType : uint8_t;
 
 	struct FORM_ENUM_STRING
 	{
