@@ -32,7 +32,7 @@ namespace RE
 #ifndef SKYRIM_SUPPORT_AE
 		~BaseExtraList();  // 00
 #else
-		virtual ~BaseExtraList();  // 00
+		virtual ~BaseExtraList() = default;  // 00
 #endif
 
 		// members
@@ -191,7 +191,7 @@ namespace RE
 		void                  SetLinkedRef(TESObjectREFR* a_targetRef, BGSKeyword* a_keyword);
 		void                  SetOwner(TESForm* a_owner);
 
-	private:
+	public:
 		BSExtraData* GetByTypeImpl(ExtraDataType a_type) const;
 		void         MarkType(std::uint32_t a_type, bool a_cleared);
 		void         MarkType(ExtraDataType a_type, bool a_cleared);

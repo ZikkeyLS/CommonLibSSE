@@ -88,7 +88,8 @@ namespace RE
 			void ChangeType(TypeInfo::RawType a_type);
 			void Cleanup();
 			void Assign(const Variable& a_rhs);
-
+		
+		public:
 			// members
 			TypeInfo varType;  // 00
 			Value    value;    // 08
