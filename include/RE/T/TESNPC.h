@@ -192,6 +192,8 @@ namespace RE
 		public:
 			[[nodiscard]] float GetInterpolationValue() const;
 
+			TES_HEAP_REDEFINE_NEW();
+
 			// members
 			Color         tintColor;           // 00 - TINC
 			std::uint16_t tintIndex;           // 04 - TINI
